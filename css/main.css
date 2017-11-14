@@ -1,3 +1,68 @@
-body {
-    background-color: pink;
+h2, h3, h4, p, label, 
+.custom-select  {
+    font-family: 'Avenir', sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+form {
+    width: 50%;
+}
+
+.form-control, #grade {
+    height: 50px;
+}
+
+.form-control, .custom-select {
+    border-radius: 0;
+}
+
+.form-control {
+    padding-left: 25px;
+    border: 1px solid #888888;
+    font-size: 15px;
+    color: #888888;
+}
+
+.form-control:focus {
+    color: #495057;    
+    background-color: #fff;
+    border: 1px solid #ff8000;
+    box-shadow: none;
+}
+
+
+.form-control #grade {
+    height: 50px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_up.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_up.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+}
+
+.btn-primary {
+    height: 50px;
+    padding: 0 25px 0 25px;
+    background-color: #ff8000;
+    font-family: 'Avenir', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #ff8000;
+    border-radius: 0;
+    line-height: 15px;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color:#df6a12;
+    border-color: #d66611;
+    cursor: pointer;
 }

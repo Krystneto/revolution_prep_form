@@ -6,22 +6,72 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Revolution Prep! Form</title>
+        <title>Revolution Prep | Form</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Import Bootstrap 4 CSS CDN  -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">        
+        <!-- Import Animate CSS CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
-        <h1>Hello</h1>
+        <div class="container mt-4">
+            <div class="ml-3">
+                <a href="https://www.revolutionprep.com/"><img src="./assets/Logo.png" alt="Logo"></a>
+            </div>
+            <form class="mt-5 ml-3" action="/" method="POST">
+                <div class="form-group row">
+                    <label for="name" class="col-sm-3 col-form-label">Name</label>
+                    <input 
+                        type="text" 
+                        class="form-control col-sm-8"  
+                        id="name"
+                        maxlength="40" 
+                        pattern="[a-zA-Z- ]*"
+                        oninvalid="this.setCustomValidity('Name must be letters only and cannot be blank.')"
+                        oninput="setCustomValidity('')"
+                        required="">
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label">Email</label>
+                    <input 
+                        type="email" 
+                        class="form-control col-sm-8" 
+                        id="email"
+                        pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+                        oninput="setCustomValidity('')"
+                        maxlength="50"                  
+                        required="">
+                </div> 
+                <div class="form-group row">
+                    <label for="grade" class="col-sm-3 col-form-label">Grade</label>
+                    <select 
+                        name="grade" 
+                        class="form-control custom-select col-sm-8" 
+                        id="grade"
+                        oninvalid="this.setCustomValidity('Grade must be selected')"
+                        oninput="setCustomValidity('')"                        
+                        required="">                    
+                        <option value="">Select a Grade</option>
+                        <option value="2">2nd Grade</option>
+                        <option value="3">3rd Grade</option>
+                        <option value="4">4th Grade</option>
+                        <option value="5">5th Grade</option>
+                    </select>
+                </div>
+                <div class="form-group float-right mr-4">
+                    <button class="btn btn-primary mt-3" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
 
-        <!-- import jQuery CDN -->
+        <!-- Import jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <!-- import Popper.js CDN -->
+        <!-- Import Popper.js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <!-- import bootstrap 4 JS CD -->
+        <!-- Import bootstrap 4 JS CDN -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
         <script src="./main.js"></script>
     </body>
